@@ -8,36 +8,37 @@
 </head>
 <body>
 
-<!-- Splash Screen -->
-<div id="splash">
+<!-- Intro Splash / Logo Morph -->
+<div id="intro">
     <img src="logo.jpeg" class="logo" alt="App Logo">
-    <h1>Business Tracker</h1>
 </div>
 
 <!-- Main App -->
 <div id="app">
 
-<h1>Dashboard</h1>
+<header>
+<h1>Business Tracker</h1>
+</header>
 
 <div class="dashboard">
-    <div class="card">
+    <div class="card purchase">
         <h3>Total Purchases</h3>
         <p id="totalPurchases">0</p>
     </div>
 
-    <div class="card">
+    <div class="card sale">
         <h3>Total Sales</h3>
         <p id="totalSales">0</p>
     </div>
 
-    <div class="card">
+    <div class="card profit">
         <h3>Profit / Loss</h3>
         <p id="profit">0</p>
     </div>
 </div>
 
+<section class="transaction-section">
 <h2>Add Transaction</h2>
-
 <div class="form">
     <input type="text" id="item" placeholder="Item Name">
     <input type="number" id="quantity" placeholder="Quantity">
@@ -49,9 +50,10 @@
     </select>
     <button onclick="addTransaction()">Save</button>
 </div>
+</section>
 
+<section class="transaction-log">
 <h2>Transaction Log</h2>
-
 <div class="table-container">
 <table>
 <thead>
@@ -66,6 +68,9 @@
 </thead>
 <tbody id="log"></tbody>
 </table>
+</div>
+</section>
+
 </div>
 
 <script src="app.js"></script>
