@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Business Profit Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Splash Screen -->
+<div id="splash">
+    <img src="logo.png" class="logo">
+    <h1>Business Tracker</h1>
+</div>
+
+<!-- Main App -->
+<div id="app">
+
+<h1>Dashboard</h1>
+
+<div class="dashboard">
+    <div class="card">
+        <h3>Total Purchases</h3>
+        <p id="totalPurchases">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Sales</h3>
+        <p id="totalSales">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Profit / Loss</h3>
+        <p id="profit">0</p>
+    </div>
+</div>
+
+
+<h2>Add Transaction</h2>
+
+<div class="form">
+<input type="text" id="item" placeholder="Item Name">
+
+<input type="number" id="quantity" placeholder="Quantity">
+
+<input type="number" id="cost" placeholder="Cost Price">
+
+<input type="number" id="price" placeholder="Selling Price">
+
+<select id="type">
+<option value="purchase">Purchased</option>
+<option value="sale">Sold</option>
+</select>
+
+<button onclick="addTransaction()">Save</button>
+</div>
+
+
+<h2>Transaction Log</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Date</th>
+<th>Item</th>
+<th>Qty</th>
+<th>Cost</th>
+<th>Price</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody id="log"></tbody>
+
+</table>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
